@@ -1493,12 +1493,6 @@
 		(uuid "2d41a794-e868-4f55-9156-e6fdcc0944be")
 	)
 	(junction
-		(at 238.76 203.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "30dc3a0c-487b-4209-8a7b-aa71f882ab50")
-	)
-	(junction
 		(at 124.46 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1839,12 +1833,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8e50c1ae-5197-4faa-8840-431b43458325")
-	)
-	(junction
-		(at 233.68 139.7)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9045b8a7-38e7-473c-930f-d003d38ab234")
 	)
 	(junction
 		(at 119.38 139.7)
@@ -2670,7 +2658,7 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 203.2) (xy 251.46 203.2)
+			(xy 226.06 203.2) (xy 251.46 203.2)
 		)
 		(stroke
 			(width 0)
@@ -3097,16 +3085,6 @@
 			(type default)
 		)
 		(uuid "8d016278-e303-405d-85e8-9961f23fc1a8")
-	)
-	(wire
-		(pts
-			(xy 226.06 203.2) (xy 238.76 203.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "918782c0-05c9-4cb5-95eb-efa189b5c99b")
 	)
 	(wire
 		(pts
@@ -3710,16 +3688,6 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 139.7) (xy 233.68 190.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e82ca7e7-09a8-46d6-92f0-6b0eb0716937")
-	)
-	(wire
-		(pts
 			(xy 182.88 114.3) (xy 182.88 139.7)
 		)
 		(stroke
@@ -3944,7 +3912,7 @@
 	)
 	(global_label "Col 10"
 		(shape input)
-		(at 419.1 127 0)
+		(at 398.78 127 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3954,7 +3922,7 @@
 		)
 		(uuid "07b5350d-8040-4cba-b4da-0b470383589c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 428.556 127 0)
+			(at 408.236 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4120,7 +4088,7 @@
 	)
 	(global_label "Col 14"
 		(shape input)
-		(at 419.1 139.7 0)
+		(at 398.78 139.7 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4130,7 +4098,7 @@
 		)
 		(uuid "22a20220-47cb-49ed-8af6-8dcea4c12658")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 428.556 139.7 0)
+			(at 408.236 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4142,7 +4110,7 @@
 	)
 	(global_label "Col 1"
 		(shape input)
-		(at 419.1 96.52 0)
+		(at 398.78 96.52 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4152,7 +4120,7 @@
 		)
 		(uuid "26ab1fc5-9480-454e-b0a0-af933dc99f84")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 427.3465 96.52 0)
+			(at 407.0265 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4164,7 +4132,7 @@
 	)
 	(global_label "Col 3"
 		(shape input)
-		(at 419.1 104.14 0)
+		(at 398.78 104.14 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4174,7 +4142,7 @@
 		)
 		(uuid "29281d7f-e624-4e51-8c2b-de975c7a7cfd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 427.3465 104.14 0)
+			(at 407.0265 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4230,7 +4198,7 @@
 	)
 	(global_label "Col 4"
 		(shape input)
-		(at 419.1 106.68 0)
+		(at 398.78 106.68 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4240,7 +4208,7 @@
 		)
 		(uuid "31bcee59-619b-4239-bd0b-3d04cc9674d4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 427.3465 106.68 0)
+			(at 407.0265 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4274,7 +4242,7 @@
 	)
 	(global_label "Col 2"
 		(shape input)
-		(at 419.1 101.6 0)
+		(at 398.78 101.6 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4284,7 +4252,7 @@
 		)
 		(uuid "4db255ef-3d75-4e16-9cde-9a5531a910ca")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 427.3465 101.6 0)
+			(at 407.0265 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4318,7 +4286,7 @@
 	)
 	(global_label "Col 6"
 		(shape input)
-		(at 419.1 114.3 0)
+		(at 398.78 114.3 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4328,7 +4296,7 @@
 		)
 		(uuid "56b94215-a744-4474-bc6a-69da4711e60c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 427.3465 114.3 0)
+			(at 407.0265 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4340,7 +4308,7 @@
 	)
 	(global_label "Col 9"
 		(shape input)
-		(at 419.1 121.92 0)
+		(at 398.78 121.92 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4350,7 +4318,7 @@
 		)
 		(uuid "56fbfc45-6d1a-4693-96e5-c932a0494083")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 427.3465 121.92 0)
+			(at 407.0265 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4384,7 +4352,7 @@
 	)
 	(global_label "Col 7"
 		(shape input)
-		(at 419.1 116.84 0)
+		(at 398.78 116.84 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4394,7 +4362,7 @@
 		)
 		(uuid "58d8d5e3-af59-4771-b38c-8baa4149509a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 427.3465 116.84 0)
+			(at 407.0265 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4406,7 +4374,7 @@
 	)
 	(global_label "Col 12"
 		(shape input)
-		(at 419.1 132.08 0)
+		(at 398.78 132.08 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4416,7 +4384,7 @@
 		)
 		(uuid "5dd4be32-4183-4763-a54f-4e2ee37ddfbb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 428.556 132.08 0)
+			(at 408.236 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4428,7 +4396,7 @@
 	)
 	(global_label "Col 11"
 		(shape input)
-		(at 419.1 129.54 0)
+		(at 398.78 129.54 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4438,7 +4406,7 @@
 		)
 		(uuid "64b0c4f7-85f6-4b6e-b52e-20f14a207037")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 428.556 129.54 0)
+			(at 408.236 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4604,7 +4572,7 @@
 	)
 	(global_label "Col 0"
 		(shape input)
-		(at 419.1 93.98 0)
+		(at 398.78 93.98 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4614,7 +4582,7 @@
 		)
 		(uuid "bb0fe958-afd9-4b14-9918-86398dd093a4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 427.3465 93.98 0)
+			(at 407.0265 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4626,7 +4594,7 @@
 	)
 	(global_label "Col 8"
 		(shape input)
-		(at 419.1 119.38 0)
+		(at 398.78 119.38 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4636,7 +4604,7 @@
 		)
 		(uuid "cc8ab813-ec59-4481-814c-1e5696bdff2e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 427.3465 119.38 0)
+			(at 407.0265 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4648,7 +4616,7 @@
 	)
 	(global_label "Col 5"
 		(shape input)
-		(at 419.1 109.22 0)
+		(at 398.78 109.22 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4658,7 +4626,7 @@
 		)
 		(uuid "d0198f57-6a52-493a-8374-f38ee04e4b38")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 427.3465 109.22 0)
+			(at 407.0265 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4714,7 +4682,7 @@
 	)
 	(global_label "Col 13"
 		(shape input)
-		(at 419.1 134.62 0)
+		(at 398.78 134.62 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4724,7 +4692,7 @@
 		)
 		(uuid "dcbaa68f-492f-4545-99e2-a190982b63d4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 428.556 134.62 0)
+			(at 408.236 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4824,7 +4792,7 @@
 	)
 	(global_label "Col 15"
 		(shape input)
-		(at 419.1 142.24 0)
+		(at 398.78 142.24 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4834,7 +4802,7 @@
 		)
 		(uuid "fcf51459-ebbc-4e74-ab40-b5549cf5c480")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 428.556 142.24 0)
+			(at 408.236 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5099,7 +5067,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05dfe9ef-bf84-467e-821b-e5fbe507650b")
-		(property "Reference" "D81"
+		(property "Reference" "D80"
 			(at 279.4 121.9199 90)
 			(effects
 				(font
@@ -5172,7 +5140,7 @@
 		(instances
 			(project "neurx"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D81")
+					(reference "D80")
 					(unit 1)
 				)
 			)
@@ -5188,7 +5156,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "133ae304-38fd-4ba9-a2f2-6e73a56d1178")
-		(property "Reference" "S45"
+		(property "Reference" "S44"
 			(at 248.92 160.02 0)
 			(effects
 				(font
@@ -5240,7 +5208,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "S45")
+					(reference "S44")
 					(unit 1)
 				)
 			)
@@ -5256,7 +5224,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "162628b9-553f-4b67-bac0-6c70c1417608")
-		(property "Reference" "S46"
+		(property "Reference" "S45"
 			(at 261.62 109.22 0)
 			(effects
 				(font
@@ -5308,7 +5276,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "S46")
+					(reference "S45")
 					(unit 1)
 				)
 			)
@@ -6062,7 +6030,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "298c3041-a2a2-426e-8239-daedb92ccd63")
-		(property "Reference" "D74"
+		(property "Reference" "D73"
 			(at 266.7 71.1199 90)
 			(effects
 				(font
@@ -6135,7 +6103,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D74")
+					(reference "D73")
 					(unit 1)
 				)
 			)
@@ -6240,7 +6208,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2d11a036-5a0a-4532-8612-17d5cb70b69c")
-		(property "Reference" "D69"
+		(property "Reference" "D68"
 			(at 254 71.1199 90)
 			(effects
 				(font
@@ -6313,7 +6281,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D69")
+					(reference "D68")
 					(unit 1)
 				)
 			)
@@ -8093,74 +8061,6 @@
 	)
 	(symbol
 		(lib_id "ScottoKeebs:Placeholder_Keyswitch")
-		(at 236.22 193.04 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "505a0a8c-631a-4c7f-8fde-a6335ef56160")
-		(property "Reference" "S42"
-			(at 236.22 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Keyswitch"
-			(at 236.22 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "ScottoKeebs_MX:MX_PCB_1.25u"
-			(at 236.22 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 236.22 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, normally open, two pins, 45° tilted"
-			(at 236.22 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e05fc668-cdf2-42c0-bcb3-20ae96980de5")
-		)
-		(pin "1"
-			(uuid "9c0df754-2459-4810-abe6-45d89bd3baa6")
-		)
-		(instances
-			(project "neurx"
-				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "S42")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ScottoKeebs:Placeholder_Keyswitch")
 		(at 248.92 142.24 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8169,7 +8069,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5063beb2-25ef-4c55-bce1-7162398c9625")
-		(property "Reference" "S44"
+		(property "Reference" "S43"
 			(at 248.92 134.62 0)
 			(effects
 				(font
@@ -8221,7 +8121,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "S44")
+					(reference "S43")
 					(unit 1)
 				)
 			)
@@ -8574,7 +8474,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5be90c8a-bf21-42f3-add8-42b3a3fbba98")
-		(property "Reference" "S43"
+		(property "Reference" "S42"
 			(at 248.92 109.22 0)
 			(effects
 				(font
@@ -8626,7 +8526,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "S43")
+					(reference "S42")
 					(unit 1)
 				)
 			)
@@ -8642,7 +8542,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5c277e08-af7c-42b5-baec-5092df93deb4")
-		(property "Reference" "D80"
+		(property "Reference" "D79"
 			(at 279.4 96.5199 90)
 			(effects
 				(font
@@ -8715,7 +8615,7 @@
 		(instances
 			(project "neurx"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D80")
+					(reference "D79")
 					(unit 1)
 				)
 			)
@@ -8955,7 +8855,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5fc73cf1-f4b4-42aa-a243-c3eb195d3e55")
-		(property "Reference" "D72"
+		(property "Reference" "D71"
 			(at 254 172.7199 90)
 			(effects
 				(font
@@ -9028,7 +8928,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D72")
+					(reference "D71")
 					(unit 1)
 				)
 			)
@@ -11629,7 +11529,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "92865a0f-5f6d-4cc4-bce7-580dbc34c9a3")
-		(property "Reference" "D70"
+		(property "Reference" "D69"
 			(at 254 121.9199 90)
 			(effects
 				(font
@@ -11702,7 +11602,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D70")
+					(reference "D69")
 					(unit 1)
 				)
 			)
@@ -12032,7 +11932,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9861cfc5-03f7-4a8e-855d-d7ca03b0eacd")
-		(property "Reference" "D75"
+		(property "Reference" "D74"
 			(at 266.7 96.5199 90)
 			(effects
 				(font
@@ -12105,7 +12005,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D75")
+					(reference "D74")
 					(unit 1)
 				)
 			)
@@ -12675,7 +12575,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ScottoKeebs_MX:MX_PCB_5.50u"
+		(property "Footprint" "ScottoKeebs_MX:MX_PCB_6.25u"
 			(at 160.02 193.04 0)
 			(effects
 				(font
@@ -12816,7 +12716,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a63a7ae7-a1fb-4e55-9009-b4812f442e5c")
-		(property "Reference" "D78"
+		(property "Reference" "D77"
 			(at 266.7 198.1199 90)
 			(effects
 				(font
@@ -12889,7 +12789,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D78")
+					(reference "D77")
 					(unit 1)
 				)
 			)
@@ -13047,95 +12947,6 @@
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
 					(reference "D19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ScottoKeebs:Placeholder_Diode")
-		(at 238.76 199.39 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ac97756d-2ae8-44cc-a043-22358d3101d7")
-		(property "Reference" "D68"
-			(at 241.3 198.1199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Diode"
-			(at 241.3 200.6599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "ScottoKeebs_Components:Diode_DO-35"
-			(at 238.76 199.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 238.76 199.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "1N4148 (DO-35) or 1N4148W (SOD-123)"
-			(at 238.76 199.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 238.76 199.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 238.76 199.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a677557e-a3b7-4ba7-ad3b-26011fa9d16b")
-		)
-		(pin "1"
-			(uuid "42b3ffe0-3cfc-4bf5-89d5-2827dff5cb32")
-		)
-		(instances
-			(project "neurx"
-				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D68")
 					(unit 1)
 				)
 			)
@@ -13758,7 +13569,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b6d64085-e8df-41a6-b64f-8da208caff21")
-		(property "Reference" "D83"
+		(property "Reference" "D82"
 			(at 279.4 172.7199 90)
 			(effects
 				(font
@@ -13831,7 +13642,7 @@
 		(instances
 			(project "neurx"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D83")
+					(reference "D82")
 					(unit 1)
 				)
 			)
@@ -14250,7 +14061,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bc97b110-9702-4a72-b956-7dc15371a606")
-		(property "Reference" "D76"
+		(property "Reference" "D75"
 			(at 266.7 121.9199 90)
 			(effects
 				(font
@@ -14323,7 +14134,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D76")
+					(reference "D75")
 					(unit 1)
 				)
 			)
@@ -14584,7 +14395,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c96b7599-676b-4e0c-8e91-5c1b0162effe")
-		(property "Reference" "D77"
+		(property "Reference" "D76"
 			(at 266.7 172.7199 90)
 			(effects
 				(font
@@ -14657,7 +14468,7 @@
 		(instances
 			(project "neurx"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D77")
+					(reference "D76")
 					(unit 1)
 				)
 			)
@@ -14964,7 +14775,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cd68cc7f-e7b3-4cf4-affb-f1c8a0914ae8")
-		(property "Reference" "D84"
+		(property "Reference" "D83"
 			(at 279.4 198.1199 90)
 			(effects
 				(font
@@ -15037,7 +14848,7 @@
 		(instances
 			(project "neurx"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D84")
+					(reference "D83")
 					(unit 1)
 				)
 			)
@@ -15860,7 +15671,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e09aedf5-47dd-49f6-953d-c4fe4c9071d2")
-		(property "Reference" "D82"
+		(property "Reference" "D81"
 			(at 279.4 147.3199 90)
 			(effects
 				(font
@@ -15933,7 +15744,7 @@
 		(instances
 			(project "neurx"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D82")
+					(reference "D81")
 					(unit 1)
 				)
 			)
@@ -16292,7 +16103,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e3d20cfa-83af-4144-8661-a26b09a4293f")
-		(property "Reference" "D73"
+		(property "Reference" "D72"
 			(at 254 198.1199 90)
 			(effects
 				(font
@@ -16365,7 +16176,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D73")
+					(reference "D72")
 					(unit 1)
 				)
 			)
@@ -17545,7 +17356,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f2293606-ba92-4f7a-8a7d-d51d9b81c74c")
-		(property "Reference" "D71"
+		(property "Reference" "D70"
 			(at 254 147.3199 90)
 			(effects
 				(font
@@ -17618,7 +17429,7 @@
 		(instances
 			(project "actualneursboard"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D71")
+					(reference "D70")
 					(unit 1)
 				)
 			)
@@ -18104,7 +17915,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f8e4606a-dbdf-4c93-b073-955a2d61ca0b")
-		(property "Reference" "D79"
+		(property "Reference" "D78"
 			(at 279.4 71.1199 90)
 			(effects
 				(font
@@ -18177,7 +17988,7 @@
 		(instances
 			(project "neurx"
 				(path "/9b825135-50b2-4678-a423-d29ba482b589"
-					(reference "D79")
+					(reference "D78")
 					(unit 1)
 				)
 			)
