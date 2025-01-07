@@ -812,6 +812,7 @@ dependencies = [
  "embassy-executor",
  "embassy-rp",
  "embassy-usb",
+ "heapless",
 ]
 
 [[package]]

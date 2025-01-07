@@ -1,12 +1,16 @@
 #![no_std]
 #![no_main]
 
-use core::sync::atomic::{AtomicBool, Ordering};
+use core::sync::atomic::{ AtomicBool, Ordering };
 
 use defmt::info;
 use embassy_executor::Spawner;
-use embassy_rp::{bind_interrupts, peripherals::USB, usb::{Driver, InterruptHandler}};
-use embassy_usb::{class::hid::State, Builder, Config, Handler};
+use embassy_rp::{
+    bind_interrupts,
+    peripherals::USB,
+    usb::{ Driver, InterruptHandler },
+};
+use embassy_usb::{ class::hid::State, Builder, Config, Handler };
 
 bind_interrupts!(struct Irqs {
     USBCTRL_IRQ => InterruptHandler<USB>;
@@ -39,7 +43,7 @@ async fn main(_spawner: Spawner) {
         &mut config_descriptor,
         &mut bos_descriptor,
         &mut msos_descriptor,
-        &mut control_buf,
+        &mut control_buf
     );
 
     builder.handler(&mut device_handler);
