@@ -1,16 +1,27 @@
 #![no_std]
 #![no_main]
 
+mod keyboard;
+mod keycode;
+
 use core::sync::atomic::{ AtomicBool, Ordering };
 
 use defmt::info;
 use embassy_executor::Spawner;
+use embassy_futures::join::join;
 use embassy_rp::{
     bind_interrupts,
+    gpio::Input,
     peripherals::USB,
     usb::{ Driver, InterruptHandler },
 };
-use embassy_usb::{ class::hid::State, Builder, Config, Handler };
+use embassy_usb::{
+    class::hid::{ HidReaderWriter, State },
+    Builder,
+    Config,
+    Handler,
+};
+use usbd_hid::descriptor::{ KeyboardReport, SerializedDescriptor };
 
 bind_interrupts!(struct Irqs {
     USBCTRL_IRQ => InterruptHandler<USB>;
@@ -47,6 +58,20 @@ async fn main(_spawner: Spawner) {
     );
 
     builder.handler(&mut device_handler);
+
+    // Create classes on the builder.
+    let config = embassy_usb::class::hid::Config {
+        report_descriptor: KeyboardReport::desc(),
+        request_handler: None,
+        poll_ms: 1,
+        max_packet_size: 64,
+    };
+    let hid = HidReaderWriter::<_, 1, 8>::new(&mut builder, &mut state, config);
+
+    let mut usb = builder.build();
+    let runtime = usb.run();
+
+    let (reader, mut writer) = hid.split();
 }
 
 struct RequestHandler {}

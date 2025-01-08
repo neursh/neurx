@@ -810,9 +810,11 @@ dependencies = [
  "cortex-m-rt",
  "defmt",
  "embassy-executor",
+ "embassy-futures",
  "embassy-rp",
  "embassy-usb",
  "heapless",
+ "usbd-hid",
 ]
 
 [[package]]
