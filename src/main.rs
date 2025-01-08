@@ -70,7 +70,7 @@ async fn main(_spawner: Spawner) {
     let mut config = Config::new(14521, 1819);
     config.manufacturer = Some("Neurs");
     config.product = Some("Neurx");
-    config.serial_number = Some("12345678");
+    config.serial_number = Some("Neurx 1.0");
     config.max_power = 100;
     config.max_packet_size_0 = 64;
 
