@@ -1,10 +1,9 @@
-
 /**
  * USB HID Keyboard scan codes
  * https://gist.github.com/MightyPork/6da26e382a7ad91b5496ee55fdc73db2
  */
 
-#[allow(non_snake_case)]
+#[allow(dead_code, non_snake_case)]
 pub struct Keycodes {
     /**
      * Modifier masks - used for the first byte in the HID report.
