@@ -1,6 +1,7 @@
 /target
-/kicad/neurx-backups
-/kicad/_autosave-neurx.kicad_sch
-/kicad/#auto_saved_files#
-/kicad/~neurx.kicad_sch.lck
-/kicad/fp-info-cache
+kicad/neurx-backups
+kicad/_autosave-neurx.kicad_sch
+kicad/#auto_saved_files#
+kicad/~neurx.kicad_sch.lck
+kicad/fp-info-cache
+kicad/~neurx.kicad_pcb.lck
