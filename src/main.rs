@@ -1,36 +1,71 @@
 #![no_std]
 #![no_main]
 
-mod keyboard;
+mod matrix;
 mod keycode;
 
-use core::sync::atomic::{ AtomicBool, Ordering };
+use core::{ panic::PanicInfo, sync::atomic::{ AtomicBool, Ordering } };
 
-use defmt::info;
 use embassy_executor::Spawner;
-use embassy_futures::join::join;
+use embassy_futures::{ join::join, yield_now };
 use embassy_rp::{
     bind_interrupts,
-    gpio::Input,
+    gpio::{ Input, Level, Output, Pull },
     peripherals::USB,
     usb::{ Driver, InterruptHandler },
 };
 use embassy_usb::{
-    class::hid::{ HidReaderWriter, State },
+    class::hid::{ HidReaderWriter, RequestHandler, State },
     Builder,
     Config,
     Handler,
 };
+use matrix::MatrixLayout;
 use usbd_hid::descriptor::{ KeyboardReport, SerializedDescriptor };
 
 bind_interrupts!(struct Irqs {
     USBCTRL_IRQ => InterruptHandler<USB>;
 });
 
+#[panic_handler]
+fn panic(_info: &PanicInfo) -> ! {
+    loop {
+    }
+}
+
 #[embassy_executor::main]
 async fn main(_spawner: Spawner) {
     let peripherals = embassy_rp::init(Default::default());
     let driver = Driver::new(peripherals.USB, Irqs);
+
+    let mut matrix = MatrixLayout::new(
+        [
+            Output::new(peripherals.PIN_15, Level::Low),
+            Output::new(peripherals.PIN_14, Level::Low),
+            Output::new(peripherals.PIN_13, Level::Low),
+            Output::new(peripherals.PIN_12, Level::Low),
+            Output::new(peripherals.PIN_11, Level::Low),
+            Output::new(peripherals.PIN_10, Level::Low),
+            Output::new(peripherals.PIN_9, Level::Low),
+            Output::new(peripherals.PIN_8, Level::Low),
+            Output::new(peripherals.PIN_7, Level::Low),
+            Output::new(peripherals.PIN_6, Level::Low),
+            Output::new(peripherals.PIN_5, Level::Low),
+            Output::new(peripherals.PIN_4, Level::Low),
+            Output::new(peripherals.PIN_3, Level::Low),
+            Output::new(peripherals.PIN_2, Level::Low),
+            Output::new(peripherals.PIN_1, Level::Low),
+            Output::new(peripherals.PIN_0, Level::Low),
+        ],
+        [
+            Input::new(peripherals.PIN_16, Pull::Down),
+            Input::new(peripherals.PIN_17, Pull::Down),
+            Input::new(peripherals.PIN_18, Pull::Down),
+            Input::new(peripherals.PIN_19, Pull::Down),
+            Input::new(peripherals.PIN_20, Pull::Down),
+            Input::new(peripherals.PIN_21, Pull::Down),
+        ]
+    );
 
     let mut config = Config::new(14521, 1819);
     config.manufacturer = Some("Neurs");
@@ -43,7 +78,7 @@ async fn main(_spawner: Spawner) {
     let mut bos_descriptor = [0; 256];
     let mut msos_descriptor = [0; 256];
     let mut control_buf = [0; 64];
-    let mut request_handler = RequestHandler {};
+    let mut request_handler = NeurxRequestHandler {};
     let mut device_handler = DeviceHandler::new();
 
     let mut state = State::new();
@@ -72,14 +107,29 @@ async fn main(_spawner: Spawner) {
     let runtime = usb.run();
 
     let (reader, mut writer) = hid.split();
+
+    let usb_output = async {
+        loop {
+            let report = matrix.scan();
+            writer.write(&report).await.ok();
+
+            yield_now().await;
+        }
+    };
+
+    let host_request = async {
+        reader.run(false, &mut request_handler).await;
+    };
+
+    join(runtime, join(usb_output, host_request)).await;
 }
 
-struct RequestHandler {}
+struct NeurxRequestHandler {}
+impl RequestHandler for NeurxRequestHandler {}
 
 struct DeviceHandler {
     configured: AtomicBool,
 }
-
 impl DeviceHandler {
     fn new() -> Self {
         DeviceHandler {
@@ -89,12 +139,19 @@ impl DeviceHandler {
 }
 
 impl Handler for DeviceHandler {
-    fn enabled(&mut self, enabled: bool) {
+    fn enabled(&mut self, _enabled: bool) {
         self.configured.store(false, Ordering::Relaxed);
-        if enabled {
-            info!("Device enabled");
-        } else {
-            info!("Device disabled");
-        }
+    }
+
+    fn reset(&mut self) {
+        self.configured.store(false, Ordering::Relaxed);
+    }
+
+    fn addressed(&mut self, _addr: u8) {
+        self.configured.store(false, Ordering::Relaxed);
+    }
+
+    fn configured(&mut self, configured: bool) {
+        self.configured.store(configured, Ordering::Relaxed);
     }
 }
