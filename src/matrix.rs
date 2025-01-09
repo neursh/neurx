@@ -6,7 +6,6 @@ pub struct MatrixLayout<'a> {
     columns: [Output<'a>; 16],
     rows: [Input<'a>; 6],
     mapping: KeycodeMapping,
-    modifiers_list: [u8; 8],
 }
 
 impl<'a> MatrixLayout<'a> {
@@ -15,12 +14,11 @@ impl<'a> MatrixLayout<'a> {
             columns,
             rows,
             mapping: KeycodeMapping::default(),
-            modifiers_list: [0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80],
         }
     }
 
     pub fn scan(&mut self) -> [u8; 8] {
-        let mut available_space = 6;
+        let mut available_spaces = 6;
         let mut report: [u8; 8] = [0u8; 8];
 
         for column_data in self.columns.iter_mut().enumerate() {
@@ -30,24 +28,25 @@ impl<'a> MatrixLayout<'a> {
                 if row_data.1.is_high() {
                     let key = self.mapping.get_key(row_data.0, column_data.0);
 
-                    if self.modifiers_list.contains(&key) {
+                    // Detects if it's a modifier key.
+                    if key.count_ones() == 1 {
                         report[0] += key;
                         continue;
                     }
 
-                    if available_space == 1 {
+                    if available_spaces == 1 {
                         report[7] = 0x01;
                         break;
                     }
 
-                    report[8 - available_space] = key;
-                    available_space -= 1;
+                    report[8 - available_spaces] = key;
+                    available_spaces -= 1;
                 }
             }
 
             column_data.1.set_low();
 
-            if available_space == 1 {
+            if available_spaces == 1 {
                 break;
             }
         }
