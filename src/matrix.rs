@@ -6,6 +6,7 @@ pub struct MatrixLayout<'a> {
     columns: [Output<'a>; 16],
     rows: [Input<'a>; 6],
     mapping: KeycodeMapping,
+    report: [u8; 8],
 }
 
 impl<'a> MatrixLayout<'a> {
@@ -14,12 +15,12 @@ impl<'a> MatrixLayout<'a> {
             columns,
             rows,
             mapping: KeycodeMapping::default(),
+            report: [0u8; 8],
         }
     }
 
-    pub fn scan(&mut self) -> [u8; 8] {
-        let mut available_spaces = 6;
-        let mut report: [u8; 8] = [0u8; 8];
+    pub fn scan(&mut self) -> &[u8; 8] {
+        let mut current = 2;
 
         for column_data in self.columns.iter_mut().enumerate() {
             column_data.1.set_high();
@@ -30,28 +31,37 @@ impl<'a> MatrixLayout<'a> {
 
                     // Detects if it's a modifier key.
                     if key.count_ones() == 1 {
-                        report[0] += key;
+                        self.report[0] += key;
                         continue;
                     }
 
-                    if available_spaces == 1 {
-                        report[7] = 0x01;
+                    self.report[current] = key;
+                    current += 1;
+
+                    // Out of space, breaking.
+                    if current == 7 {
                         break;
                     }
-
-                    report[8 - available_spaces] = key;
-                    available_spaces -= 1;
                 }
             }
 
             column_data.1.set_low();
 
-            if available_spaces == 1 {
+            // Out of space, breaking the whole scanning process.
+            if current == 7 {
+                self.report[7] = 0x01;
                 break;
             }
         }
 
-        report
+        if current != 7 {
+            // Cleaning up from previous report.
+            for dead_bits in current..=7 {
+                self.report[dead_bits] = 0x00;
+            }
+        }
+
+        &self.report
     }
 }
 

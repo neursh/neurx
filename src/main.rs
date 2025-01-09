@@ -111,7 +111,7 @@ async fn main(_spawner: Spawner) {
     let usb_output = async {
         loop {
             let report = matrix.scan();
-            writer.write(&report).await.ok();
+            writer.write(report).await.ok();
 
             yield_now().await;
         }
