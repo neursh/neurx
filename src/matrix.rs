@@ -50,15 +50,14 @@ impl<'a> MatrixLayout<'a> {
             // Out of space, breaking the whole scanning process.
             if current == 7 {
                 self.report[7] = 0x01;
+                current += 1;
                 break;
             }
         }
 
-        if current != 7 {
-            // Cleaning up from previous report.
-            for dead_bits in current..=7 {
-                self.report[dead_bits] = 0x00;
-            }
+        // Cleaning up from previous report.
+        for dead_bits in current..8 {
+            self.report[dead_bits] = 0x00;
         }
 
         &self.report
